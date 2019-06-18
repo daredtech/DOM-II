@@ -25,7 +25,7 @@ btnArray.forEach(element => {
 let address = document.getElementsByTagName('p');
 let addressArray = Array.from(address);
 addressArray.forEach(element => {
-    element.addEventListener('copy', function(event){
+    element.addEventListener('copy', (event)=>{
         alert("Book a tour with 20% off. PromoCode 20SUMMER");
     })
 })
@@ -34,19 +34,30 @@ addressArray.forEach(element => {
 let h2= document.getElementsByTagName('h2');
 let h2Array = Array.from(h2);
 h2Array.forEach(element => {
-    element.addEventListener('select', (event) => {event.target.style.background = "orange"});
+    element.addEventListener('select', (event) => {event.target.style.backgroundColor = "orange"});
 })
 
+//#7
+let dreamDestination = document.getElementById('dreamDestination');
+dreamDestination.addEventListener('focus', (event)=>{
+    event.target.style.border = "1px dashed orange";
+});
 
-// var contactForm = document.body.createElement("contact-form");
-// contactForm.style.display.none;
+//#8
+let dreamInput = dreamDestination.value;
+let submitInput = document.getElementsByClassName('dreamBtn');
+submitInput[0].addEventListener('click', (event) => {dreamInput = dreamDestination.value, console.log(dreamInput)});
 
+//#9
+dreamDestination.addEventListener('keydown', (event) => {console.log("KEYDOWN")});
 
-
-
+//#10
+let imgCollection = document.getElementsByTagName('img');
+imgCollection[1].addEventListener('load', (element) => {event.target.src = "img/vacation-meme.jpg"});
 
 
 //stop nav from refreshing
 let nav = document.getElementsByTagName('nav');
 nav[0].addEventListener('click', (element) => {element.preventDefault();});
+
 
