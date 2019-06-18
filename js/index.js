@@ -55,14 +55,20 @@ dreamDestination.addEventListener('keydown', (event) => {console.log("KEYDOWN")}
 let imgCollection = document.getElementsByTagName('img');
 imgCollection[1].addEventListener('load', (element) => {event.target.src = "img/vacation-meme.jpg"});
 
+//propagation
+const container = document.querySelector('body');
+container.addEventListener('click', event => {
+  console.log('clicked', event.target)
+})
+
+//stop propagation
+const header = document.querySelector('header');
+header.addEventListener('click', event => {
+    event.stopPropagation();
+  })
 
 //stop nav from refreshing
 let nav = document.getElementsByTagName('nav');
 nav[0].addEventListener('click', (element) => {element.preventDefault();});
 
 
-//propagation
-const container = document.querySelector('body');
-container.addEventListener('click', event => {
-  console.log('clicked', event.target, event.screenX, event.screenY)
-})
