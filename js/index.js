@@ -61,3 +61,8 @@ let nav = document.getElementsByTagName('nav');
 nav[0].addEventListener('click', (element) => {element.preventDefault();});
 
 
+//propagation
+const container = document.querySelector('body');
+container.addEventListener('click', event => {
+  console.log('clicked', event.target, event.screenX, event.screenY)
+})
