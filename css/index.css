@@ -163,6 +163,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+input {
+  width: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 .container {
   max-width: 800px;
   width: 100%;
@@ -304,6 +309,10 @@ img {
 }
 .home .content-destination img {
   border-radius: 10px;
+}
+.home .content-destination .dreamBtn {
+  background: orange;
+  width: 15%;
 }
 .home .content-pick {
   padding-top: 30px;
